@@ -1,0 +1,7 @@
+/bin/
+/.classpath
+/build/
+/Irmi-s-Repository_Client.launch
+/Irmi-s-Repository_Server.launch
+/.settings/
+/.gradle/
