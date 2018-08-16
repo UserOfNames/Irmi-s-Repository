@@ -7,11 +7,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
- * Main modification class. 
- * @author J-Dierberger
+ * Main modification class.
  */
 @Mod(useMetadata = true,
 	modid = IrmiRepoMod.MODID,
@@ -43,19 +43,36 @@ public class IrmiRepoMod {
 	 */
 	private static Logger logger;
 
+	/**
+	 * Pre-initialization. Occurs before block/item registration, so
+	 * registration-sensitive tasks must occur here, in addition to adding
+	 * capabilities and reading the config file.
+	 * @param event The event.
+	 */
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
 		
 	}
 
+	/**
+	 * Initialization event. Occurs after all auto-registration events. Usually
+	 * world generators, event handlers for world-events (and others) are
+	 * registered here, as well as sending IMC (Inter-Mod Communication)
+	 * messages.
+	 * @param event Event.
+	 */
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		
 	}
 
+	/**
+	 * Post-initialization event. Usually mod-compatability stuff.
+	 * @param event Event.
+	 */
 	@EventHandler
-	public void postInit(FMLInitializationEvent event) {
+	public void postInit(FMLPostInitializationEvent event) {
 		
 	}
 
