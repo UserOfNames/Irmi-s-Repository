@@ -2,6 +2,9 @@ package main.java;
 
 import org.apache.logging.log4j.Logger;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -37,6 +40,13 @@ public class IrmiRepoMod {
 	 */
 	@Instance(MODID)
 	public static IrmiRepoMod instance;
+
+	public static final CreativeTabs IRMI_REPO_TAB = new CreativeTabs("irmirepo") {
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(Items.STONE_AXE);
+		}
+	};
 
 	/**
 	 * Logger instance, provided by preInit
